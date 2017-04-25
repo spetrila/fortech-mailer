@@ -1,0 +1,9 @@
+
+${AnsiColor.GREEN}   ______         _            _     ${AnsiColor.RED}  __  __       _ _
+${AnsiColor.GREEN}  |  ____|       | |          | |    ${AnsiColor.RED} |  \/  |     (_) |
+${AnsiColor.GREEN}  | |__ ___  _ __| |_ ___  ___| |__  ${AnsiColor.RED} | \  / | __ _ _| | ___ _ __
+${AnsiColor.GREEN}  |  __/ _ \| '__| __/ _ \/ __| '_ \ ${AnsiColor.RED} | |\/| |/ _` | | |/ _ \ '__|
+${AnsiColor.GREEN}  | | | (_) | |  | ||  __/ (__| | | |${AnsiColor.RED} | |  | | (_| | | |  __/ |
+${AnsiColor.GREEN}  |_|  \___/|_|   \__\___|\___|_| |_|${AnsiColor.RED} |_|  |_|\__,_|_|_|\___|_|
+
+${AnsiColor.BRIGHT_BLUE}:: FortechMailer :: Running Spring Boot ${spring-boot.version} ::

@@ -1,0 +1,49 @@
+
+<div *ngIf="campaign">
+    <h2><span jhiTranslate="fortechMailerApp.campaign.detail.title">Campaign</span> {{campaign.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="fortechMailerApp.campaign.name">Name</span></dt>
+        <dd>
+            <span>{{campaign.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="fortechMailerApp.campaign.description">Description</span></dt>
+        <dd>
+            <span>{{campaign.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="fortechMailerApp.campaign.subject">Subject</span></dt>
+        <dd>
+            <span>{{campaign.subject}}</span>
+        </dd>
+        <dt><span jhiTranslate="fortechMailerApp.campaign.template">Template</span></dt>
+        <dd>
+            <div *ngIf="campaign.templateId">
+                <a [routerLink]="['/template', campaign.templateId]">{{campaign.templateName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="fortechMailerApp.campaign.user">User</span></dt>
+        <dd>
+            {{campaign.userLogin}}
+        </dd>
+        <dt><span jhiTranslate="fortechMailerApp.campaign.tag">Tag</span></dt>
+        <dd>
+            <span *ngFor="let tag of campaign.tags; let last = last">
+                <a [routerLink]="['/tag', tag?.id ]">{{tag.name}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'campaign/'+ campaign.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

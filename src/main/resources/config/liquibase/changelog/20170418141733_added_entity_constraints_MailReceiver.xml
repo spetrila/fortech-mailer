@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity MailReceiver.
+    -->
+    <changeSet id="20170418141733-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="mail_receivers_id"
+                                 baseTableName="mail_receiver_tag"
+                                 constraintName="fk_mail_receiver_tag_mail_receivers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mail_receiver"/>
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="mail_receiver_tag"
+                                 constraintName="fk_mail_receiver_tag_tags_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tag"/>
+        
+    </changeSet>
+</databaseChangeLog>

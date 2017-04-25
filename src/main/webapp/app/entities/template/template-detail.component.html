@@ -1,0 +1,30 @@
+
+<div *ngIf="template">
+    <h2><span jhiTranslate="fortechMailerApp.template.detail.title">Template:</span> {{template.name}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="fortechMailerApp.template.description">Description</span></dt>
+        <dd>
+            <span>{{template.description}}</span>
+        </dd>
+        <br>
+        <dt><span jhiTranslate="fortechMailerApp.template.content">Content</span></dt>
+        <dd>
+            <div [innerHTML]="template.content"></div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'template/'+ template.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

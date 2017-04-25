@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "mailReceivers",
+            "otherEntityName": "mailReceiver",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "tag"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "campaigns",
+            "otherEntityName": "campaign",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "tag"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170418141734",
+    "entityTableName": "tag",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

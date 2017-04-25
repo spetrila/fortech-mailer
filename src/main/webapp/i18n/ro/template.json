@@ -1,0 +1,24 @@
+{
+    "fortechMailerApp": {
+        "template" : {
+            "home": {
+                "title": "Templates",
+                "createLabel": "Crează o nouă Template",
+                "createOrEditLabel": "Crează sau editează o Template"
+            },
+            "created": "O nouă Template este creată cu identificatorul {{ param }}",
+            "updated": "O Template este editată cu identificatorul {{ param }}",
+            "deleted": "O Template este stearsă cu identificatorul {{ param }}",
+            "delete": {
+                "question": "Ești sigur că dorești să stergi Template {{ id }}?"
+            },
+            "detail": {
+                "title": "Template"
+            },
+            "name": "Name",
+            "description": "Description",
+            "content": "Content",
+            "user": "User"
+        }
+    }
+}

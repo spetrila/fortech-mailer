@@ -1,0 +1,24 @@
+{
+    "fortechMailerApp": {
+        "mailReceiver" : {
+            "home": {
+                "title": "Mail Receivers",
+                "createLabel": "Crează o nouă Mail Receiver",
+                "createOrEditLabel": "Crează sau editează o Mail Receiver"
+            },
+            "created": "O nouă Mail Receiver este creată cu identificatorul {{ param }}",
+            "updated": "O Mail Receiver este editată cu identificatorul {{ param }}",
+            "deleted": "O Mail Receiver este stearsă cu identificatorul {{ param }}",
+            "delete": {
+                "question": "Ești sigur că dorești să stergi Mail Receiver {{ id }}?"
+            },
+            "detail": {
+                "title": "Mail Receiver"
+            },
+            "name": "Name",
+            "description": "Description",
+            "emailAddress": "Email Address",
+            "tag": "Tag"
+        }
+    }
+}

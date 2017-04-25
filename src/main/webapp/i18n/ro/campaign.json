@@ -1,0 +1,26 @@
+{
+    "fortechMailerApp": {
+        "campaign" : {
+            "home": {
+                "title": "Campaigns",
+                "createLabel": "Crează o nouă Campaign",
+                "createOrEditLabel": "Crează sau editează o Campaign"
+            },
+            "created": "O nouă Campaign este creată cu identificatorul {{ param }}",
+            "updated": "O Campaign este editată cu identificatorul {{ param }}",
+            "deleted": "O Campaign este stearsă cu identificatorul {{ param }}",
+            "delete": {
+                "question": "Ești sigur că dorești să stergi Campaign {{ id }}?"
+            },
+            "detail": {
+                "title": "Campaign"
+            },
+            "name": "Name",
+            "description": "Description",
+            "subject": "Subject",
+            "template": "Template",
+            "user": "User",
+            "tag": "Tag"
+        }
+    }
+}

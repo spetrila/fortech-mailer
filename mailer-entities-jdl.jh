@@ -1,0 +1,49 @@
+entity MailReceiver {
+	id Long,
+    name String required,
+    description String,
+	emailAddress String required
+}
+
+entity Tag {
+	id Long,
+    name String required,
+    description String
+}
+
+entity Template {
+	id Long,
+    name String required,
+    description String,
+    content String required
+}
+
+entity Campaign {
+	id Long,
+    name String required,
+    description String,
+    subject String
+}
+
+relationship OneToOne {
+	Campaign{template(name)} to Template
+}
+
+relationship ManyToMany {
+	MailReceiver{tag(name)} to Tag{mailReceivers}
+}
+
+relationship ManyToMany {
+  	Campaign{tag(name)} to Tag{campaigns}
+}
+
+relationship ManyToOne {
+    Campaign{user(login)} to User,
+    Template{user(login)} to User
+}
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
